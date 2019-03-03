@@ -1,33 +1,35 @@
-.App {
+html { 
+  background: url(bg2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-size: 80px;
+    text-shadow: 4px 4px 4px #aaa;
+    color: #ffd700;
+    text-align: center;
+    font-style: italic;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: 1fr;
+  grid-gap: 20px;
+  
+}
+
+.zone {
   text-align: center;
+  border: solid;
+  background-color: grey;
+  border-radius: 50px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div h3 {
+  color: #ffd700;
 }
