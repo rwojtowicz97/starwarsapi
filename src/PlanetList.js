@@ -1,7 +1,7 @@
 import React from 'react';
 import Planet from './Planet';
 
-const planetList = ({ planets }) => {
+const PlanetList = ({ planets }) => {
 	
 		return (
 			<div>
