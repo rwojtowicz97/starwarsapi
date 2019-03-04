@@ -28,6 +28,7 @@ h1 {
   border: solid;
   background-color: grey;
   border-radius: 50px;
+  opacity: 0.5;
 }
 
 div h3 {
