@@ -2,12 +2,12 @@ import React from 'react';
 
 const Planet = ({ name, climate, population }) => {
 	return (
-		<div className="">
-		<div>	
+		<div>
+			
 			<h2>{name}</h2>
-			<p>Climate: {climate}</p>
-			<p>Population: {population}</p>
-		</div>
+			<p><strong>Climate:</strong> {climate}</p>
+			<p><strong>Population:</strong> {population}</p>
+		
 		</div>
 		);
 }

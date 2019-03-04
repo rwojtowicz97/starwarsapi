@@ -1,5 +1,5 @@
 import React from 'react';
-import Planet from './Planet';
+import Planet from './Planet.js';
 
 const PlanetList = ({ planets }) => {
 	
@@ -10,10 +10,12 @@ const PlanetList = ({ planets }) => {
 				planets.map((planet, i) => {
 					return (
 						<Planet
+							
 							key={i}
 							name={planets[i].name}
 							climate={planets[i].climate}
 							population={planets[i].population}
+							
 							/>
 						);
 				})
@@ -26,4 +28,4 @@ const PlanetList = ({ planets }) => {
 
 
 
-export default planetList;
+export default PlanetList;

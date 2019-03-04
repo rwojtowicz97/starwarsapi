@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import PlanetList from './PlanetList.js'
+import PlanetList from '../Components/Planet/PlanetList.js'
 
 class App extends Component {
   constructor() {
@@ -10,19 +10,20 @@ class App extends Component {
     }
   }
 
-  componetDidMount() {
-    fetch('https://swapi.co/api/planets/?format=json')
+  componentDidMount() {
+    fetch('https://swapi.co/api/planets/')
     .then(response => response.json())
-    .then(planety => this.setState ({planets: planety}))
+    .then(planety => this.setState ({planets: planety.results}))
   }
 
+ 
   render() {
     const { planets } = this.state;
     return (
-      <div className='tc'>
+      <div>
         <h1>Star Wars</h1>
           <div className="container">
-          <PlanetList planets={ planets } />
+           <div className="zone planets"><PlanetList planets={planets} /></div>
           </div>
       </div>
 
