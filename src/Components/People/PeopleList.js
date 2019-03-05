@@ -12,9 +12,9 @@ const PeopleList = ({ people }) => {
 						<People
 							
 							key={i}
-							name={People[i].name}
-							height={People[i].height}
-							gender={People[i].gender}
+							name={people[i].name}
+							height={people[i].height}
+							gender={people[i].gender}
 							
 							/>
 						);
