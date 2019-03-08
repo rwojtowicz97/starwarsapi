@@ -7,7 +7,7 @@ const PeopleList = ({ people }) => {
 			<div>
 
 				{
-				people.map((people, i) => {
+				people.map((person, i) => {
 					return (
 						<People
 							
