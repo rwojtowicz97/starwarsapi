@@ -1,20 +1,20 @@
 import React from 'react';
-import People from './People.js';
+import Planet from './Planet.js';
 
-const PeopleList = ({ people }) => {
+const PlanetList = ({ planets }) => {
 	
 		return (
 			<div>
 
 				{
-				people.map((person, i) => {
+				planets.map((planet, i) => {
 					return (
-						<People
+						<Planet
 							
 							key={i}
-							name={people[i].name}
-							height={people[i].height}
-							gender={people[i].gender}
+							name={planets[i].name}
+							climate={planets[i].climate}
+							population={planets[i].population}
 							
 							/>
 						);
@@ -28,4 +28,4 @@ const PeopleList = ({ people }) => {
 
 
 
-export default PeopleList;
+export default PlanetList;
