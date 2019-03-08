@@ -15,22 +15,24 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
+ async componentDidMount() {
 
-    Promise.all([
-        fetch('https://swapi.co/api/planets/'),
-        fetch('https://swapi.co/api/people/'),
-        fetch('https://swapi.co/api/starships/')
-      ])
-      .then(([res1, res2, res3]) => Promise.all([res1.json(), res2.json(), res3.json()]))
-      .then(([data1, data2, data3]) => this.setState({
-        planets: data1.results,
-        people: data2.results,
-        starships: data3.results
-      }))
+      const urls = [
+          'https://swapi.co/api/planets/',
+          'https://swapi.co/api/people/',
+          'https://swapi.co/api/starships/'
+        ]
+  
+      const [planets, people, starships] = await Promise.all(urls.map(async function (url){
+              const response = await fetch(url);
+              return response.json();
+              }));
 
-      
-
+      this.setState({
+        planets: planets.results,
+        people: people.results,
+        starships: starships.results
+      })
   }
 
  
