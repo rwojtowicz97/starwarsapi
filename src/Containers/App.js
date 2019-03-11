@@ -52,11 +52,3 @@ class App extends Component {
 }
 
 export default App;
-// <div>
-//   <h1>Star Wars</h1>
-//     <div className="container">
-//       <div className="zone planets"><h3>Planets</h3><ul></ul></div>
-//       <div className="zone ships"><h3>Ships</h3><ul></ul></div>
-//       <div className="zone characters"><h3>Characters</h3><ul></ul></div>
-//     </div>
-// </div>
